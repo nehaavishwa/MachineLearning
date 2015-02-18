@@ -1,15 +1,11 @@
-# Created by Octave 3.8.1, Wed Feb 04 20:29:53 2015 PST <nehaavishwa@ubuntu>
+# Created by Octave 3.2.4, Mon Feb 09 12:32:00 2015 Pacific Standard Time <unknown@unknown>
 # name: login
-# type: sq_string
+# type: string
 # elements: 1
 # length: 21
 nehaavishwa@gmail.com
-
-
 # name: password
-# type: sq_string
+# type: string
 # elements: 1
 # length: 10
 ac42mXDJyj
-
-
