@@ -1,0 +1,23 @@
+function g = sigmoid(z)
+%SIGMOID Compute sigmoid functoon
+%   J = SIGMOID(z) computes the sigmoid of z.
+
+% You need to return the following variables correctly 
+g = zeros(size(z));
+col_num = columns(z);
+row_num = rows(z);
+
+% ====================== YOUR CODE HERE ======================
+% Instructions: Compute the sigmoid of each value of z (z can be a matrix,
+%               vector or scalar).
+for row = 1:row_num
+	for col = 1:col_num
+		g(row, col) = 1/(1+ e.^ -(z(row, col)));
+	endfor
+endfor
+
+
+
+% =============================================================
+
+end
