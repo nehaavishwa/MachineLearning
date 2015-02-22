@@ -8,14 +8,14 @@ m = length(y); % number of training examples
 
 % You need to return the following variables correctly 
 J = 0;
-
+%J = 32;
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
-h = theta' * X;
-
-
+h = (theta' * X')';
+sqr = sum((h-y).^2);
+J = (sqr)/(2 * m);
 
 
 % =========================================================================

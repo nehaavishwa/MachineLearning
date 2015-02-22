@@ -24,16 +24,34 @@ sigma = zeros(1, size(X, 2));
 %               each feature. 
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
-%       
+%      
+%X_norm = X_norm-mu;
+%data = load('ex1data2.txt');
+%X = data(:, 1); 
+%num_iters = length(X);
+%for iter = 1:num_iters
+	%X_norm = X_norm - mu;
+%	std_dev = std(X(:,1));
+	%X_norm = X_norm/std_dev;
+%end
+%X_norm = sum(X_norm/std_dev);
+%fprintf('The value of Mean Normalization is %f and standard deviation is %f \n', X_norm, std_dev);
+%fprintf('The value of mu is %f \n, value of sigma is %f \n, value of mean of this feature %f \n\n', mu, sigma, X_norm);
 
-
-
-
-
-
-
-
-
+for X_column = 1:columns(X)
+	mu(1,X_column)    = mean(X(:,X_column));
+	fprintf('mu is %f \n',mu);
+	sigma(1,X_column) = std(X(:,X_column));
+	fprintf('sigma is %f \n',sigma);
+end
+ %fprintf('The value of mu is %f \n, value of sigma is %f \n, value of mean of this feature %f \n\n', mu, sigma, X_norm);
+%X_norm;
+for row = 1:rows(X)
+	for X_column = 1:columns(X)
+		X_norm(row,X_column) = (X(row,X_column)-mu(1,X_column))/sigma(1,X_column);
+	%	fprintf('Mean_normalization is %f \n',X_norm(row,X_column))
+	end
+end
 % ============================================================
 
 end

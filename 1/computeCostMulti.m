@@ -13,9 +13,15 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+for iter = 1:m
+	xTrans = ((X * theta) - y)';
+	x = (X * theta) - y;
+	J = 1/2 * 1/m * xTrans * x;
+end
 
-
-
+%h = (theta' * X')';
+%sqr = sum((h-y).^2);
+%J = (sqr)/(2 * m);
 
 % =========================================================================
 
